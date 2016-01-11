@@ -1,0 +1,63 @@
+* Create branch A, then create B, and merge into master
+  Scenario: you were working on master branch. Then:
+  1. You create a new branch NewFunc1 and checkout to it.
+     git checkout -b NewFunc1
+  2. Made some changes and commit.
+     git add; git commit -m "Some strings";
+  3. A bug #Issue2b come, you have to fix it now.
+  4. You switch to master branch first. Then create a Issue2b branch. !!!! Important !!!!
+     git checkout master
+     git checkout -b Issue2b
+  5. You made several commits and fixed that bug.
+     git add; git commit -m "Bug Fixed";
+  6. You checkout to master branch and merge Issue2b into master. Since Issue2b is merged
+     into master, it's no longer useful and u delete it.
+     git checkout master
+     git merge Issue2b
+     git branch -d Issue2b
+  7.!!!! Since you fixed bugs but NewFunc1 doesn't contain it, you should merge master into it. !!!!
+     git checkout NewFunc1
+     git merge master
+  8. Switch to NewFunc1 again and made several commits. Finally you finish it and it's
+     time to merge it into master.
+     git add; git commit -m "NewFunc1 Implemented";
+  9. Checkout master branch. Merge NewFunc1 branch into master branch.
+     git checkout master
+     git merge NewFunc1
+     git branch -d NewFunc1
+     
+
+
+* Merge Command Workflow (With and Without Conflicts)
+** Without Conflicts
+   Senario: You created a new branch NewFunc1 based on master. You finished work on
+   NewFunc1 and want to merge it into master.
+   
+   1. git checkout -b NewFunc1
+   2. git add; git commit -m 'NewFunc1 Implemented';
+   3. git checkout master
+   4. git merge NewFunc1
+   5. git branch -d NewFunc1
+
+** With Conflicts
+   Senario: You created a new branch NewFunc1 based on master. You finished work on
+   NewFunc1 and want to merge it into master. But run into conflicts. You solve
+   conflict files confFile1. Then merge NewFunc1 into master.
+
+   1. git checkout -b NewFunc1
+   2. git add; git commit -m 'NewFunc1 Implemented';
+   3. git checkout master
+   4. git merge NewFunc1
+     Auto-merging confFile1
+     CONFLICT (content): Merge conflict in confFile1
+     Automatic merge failed; fix conflicts and then commit the result.
+   5. git status
+      This will show you which file has conflicts.
+   6. Then you have to open the file, solve conflicts and save changes. You can use
+      git mergetool
+      This will open the configured advanced GUI tool to help solving conflicts
+   7. git status
+      Check again to make sure there is no conflicts.
+   8. git commit
+      This will continue the conflicted merge.
+   10. git branch -d NewFunc1   
