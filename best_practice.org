@@ -1,0 +1,22 @@
+* Undo Things
+  + Undo the previous commit:
+    git commit --amend
+    This option is used when:
+    Commit too early that some files forgot to add
+    Commit message was wrong.
+    
+    For the first case:
+    git commit "The previous one" 
+    git add the-file-you-forgot
+    git commit --amend "Overwrite the last commit"
+
+  + Undo staging area: git reset
+    git reset HEAD [filename]
+    
+    This command only touch the staging area. It will unstage the staged files.
+
+  + Undo modified files:
+    git checkout -- [filename]
+    
+    This command is dangerous. You're overwriting the current file with file from last
+    commit. Every change will lose. A better way to do this is using branch.
