@@ -1,6 +1,6 @@
 * Undo Things
   # This is rebase start point
-  + Undo the previous commit:
+  + Undo this the previous commit:
     git commit --amend
     This option is used when:
     Commit too early that some files forgot to add
