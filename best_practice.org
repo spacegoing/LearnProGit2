@@ -1,4 +1,5 @@
 * Undo Things
+  This is rebase start point
   + Undo the previous commit:
     git commit --amend
     This option is used when:
