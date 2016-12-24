@@ -1,6 +1,6 @@
 Red: Command with Details.
 Purple: Important Concept.
-Yellow: Important Details.
+# yeow: Important Details.
 Blue: Best Practice.
 Underline: words to notice.
 
@@ -8,6 +8,18 @@ Underline: words to notice.
 
 
 
-         +-----+       +-----+       +-----+
-         | C2  | <---- | C5  | <---- | C6  |
-         +-----+       +-----+       +-----+
+         +-----+
+         | C2  |
+         +-----+
+               \
+                \
+                 \
+                  \ +-----+
+                   \| C3  |
+                    +---\-+
+                         \
+                          \
+                           \
+                            \+-----+
+                             | C8  |
+                             +-----+
