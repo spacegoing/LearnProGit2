@@ -1,6 +1,10 @@
 * Undo Things
   # This is rebase start point
+<<<<<<< HEAD
   + Undo this the previous commit:
+=======
+  + Undo the previous commit:
+>>>>>>> best_practice 1
     git commit --amend
     This option is used when:
     Commit too early that some files forgot to add
@@ -21,3 +25,27 @@
     
     This command is dangerous. You're overwriting the current file with file from last
     commit. Every change will lose. A better way to do this is using branch.
+
+ 
+
+           +-------+
+           |       |
+           |       |
+           +-------+
+                 \
+                  \
+                   \-
+                     \  +-------+
+                      \ |       |
+                        |       |
+                        +-------+
+                             \
+                              \
+                               \-
+                                 \
+                                  \  +-------+
+                                   \ |       |
+                                     |       |
+                                     +-------+
+
+
