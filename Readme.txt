@@ -4,3 +4,10 @@ Yellow: Important Details.
 Blue: Best Practice.
 Underline: words to notice.
 
+
+
+
+
+         +-----+
+         | C2  |
+         +-----+
