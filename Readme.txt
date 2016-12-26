@@ -1,6 +1,7 @@
 Red: Command with Details.
 Purple: Important Concept.
 Yellow: Important Details.
+Perils of Rebasing
 Blue: Best Practice.
 Underline: words to notice.
 
@@ -9,11 +10,5 @@ Underline: words to notice.
 
 
          +-----+
-         | C2  |
+         | C1  |
          +-----+
-               \
-                \
-                 \
-                  \ +-----+      +-----+        +-----+
-                   \| C3  | <----| C4  | <----- | C10 |
-                    +-----+      +-----+        +-----+
