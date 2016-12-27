@@ -1,6 +1,8 @@
 Red: Command with Details.
 Purple: Important Concept.
 Yellow: Important Details.
+
+# Start pull.rebase 
 Perils of Rebasing
 Blue: Best Practice.
 Underline: words to notice.
